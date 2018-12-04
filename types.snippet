@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Struct</Title>
+            <Shortcut>st</Shortcut>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>StructName</ID>
+                    <ToolTip>The struct name</ToolTip>
+                    <Default>my_struct</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="C++">
+                <![CDATA[struct $StructName$
+                {
+                    $end$
+
+                };]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Class</Title>
+            <Shortcut>cl</Shortcut>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>ClassName</ID>
+                    <ToolTip>The class name</ToolTip>
+                    <Default>my_class</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="C++">
+                <![CDATA[class $ClassName$
+                {
+                public:
+                    $ClassName$() = default;
+                    ~$ClassName$() = default;
+                    $ClassName$($ClassName$ const& other) = default;
+                    $ClassName$($ClassName$ && other) = default;
+                    $ClassName$& operator=($ClassName$ const& other) = default;
+                    $ClassName$& operator=($ClassName$ && other) = default;
+                    $end$
+                private:
+
+                };]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
